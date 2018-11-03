@@ -293,13 +293,13 @@ const searchTable = () => {
     allSearchTables[curPage - 1].innerHTML;
   let div = document.getElementById('pagination');
   div.innerHTML = '';
-  div.innerHTML += `<button id='prev' onclick='handleButton(this)' disabled>prev</button>`;
+  div.innerHTML += `<button class='navbutton' id='prev' onclick='handleButton(this)' disabled>prev</button>`;
   for (let i in allSearchTables) {
-    div.innerHTML += `<button onclick='handleButton(this)'>${i -
+    div.innerHTML += `<button class='navbutton' onclick='handleButton(this)'>${i -
       0 +
       1}</button>`;
   }
-  div.innerHTML += `<button id='next' onclick='handleButton(this)'>next</button>`;
+  div.innerHTML += `<button class='navbutton' id='next' onclick='handleButton(this)'>next</button>`;
   if (allSearchTables.length === 1) {
     document.getElementById('next').disabled = true;
   }
