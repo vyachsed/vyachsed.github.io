@@ -295,9 +295,15 @@ const searchTable = () => {
   div.innerHTML = '';
   div.innerHTML += `<button class='navbutton' id='prev' onclick='handleButton(this)' disabled>prev</button>`;
   for (let i in allSearchTables) {
-    div.innerHTML += `<button class='navbutton' onclick='handleButton(this)'>${i -
-      0 +
-      1}</button>`;
+    if (i == 0) {
+      div.innerHTML += `<button style='background-color: rgba(1, 1, 1, 0.1);' class='navbutton' onclick='handleButton(this)'>${i -
+        0 +
+        1}</button>`;
+    } else {
+      div.innerHTML += `<button class='navbutton' onclick='handleButton(this)'>${i -
+        0 +
+        1}</button>`;
+    }
   }
   div.innerHTML += `<button class='navbutton' id='next' onclick='handleButton(this)'>next</button>`;
   if (allSearchTables.length === 1) {
