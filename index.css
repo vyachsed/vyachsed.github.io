@@ -1,0 +1,38 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+table {
+  width: 100%;
+  border: 1px solid #cccccc;
+  border-spacing: 3px;
+  border-collapse: collapse;
+  margin-top: 5px;
+}
+
+td {
+  border: solid 1px #cccccc;
+}
+
+th {
+  border: solid 1px #cccccc;
+}
+
+thead {
+  background-color: rgba(1, 1, 1, 0.1);
+}
+
+.search-block {
+  text-align: right;
+}
+
+.navbutton {
+  background-color: white;
+  border: 0;
+}
